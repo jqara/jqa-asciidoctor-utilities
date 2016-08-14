@@ -18,7 +18,7 @@
     <fileSets>
         <fileSet>
             <directory>src/main/asciidoc</directory>
-            <outputDirectory>.</outputDirectory>
+            <outputDirectory>asciidoc</outputDirectory>
             <includes>
                 <include>*</include>
             </includes>
@@ -26,21 +26,26 @@
         </fileSet>
         <fileSet>
             <directory>${project.build.directory}/generated-sources/asciidoc</directory>
-            <outputDirectory>.</outputDirectory>
+            <outputDirectory>asciidoc</outputDirectory>
             <includes>
                 <include>*</include>
             </includes>
         </fileSet>
         <fileSet>
-            <outputDirectory>src</outputDirectory>
+            <directory>src</directory>
+            <outputDirectory>source</outputDirectory>
             <includes>
-                <include>src/main/java/**</include>
-                <include>src/main/resources/**</include>
+                <include>main/java/**</include>
+                <include>main/resources/**</include>
                 <include>jqassistant/**</include>
             </includes>
             <filtered>true</filtered>
         </fileSet>
     </fileSets>
+    <!--
+     ! Not sure if we need the POM really. Maybe it could be removed?
+     ! Oliver B. Fischer, 2016-08-10
+     !-->
     <files>
         <file>
             <outputDirectory>src</outputDirectory>
