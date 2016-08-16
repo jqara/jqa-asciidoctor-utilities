@@ -21,7 +21,7 @@
         <xsl:apply-templates select="//scanner"/>
 
         <xsl:if test="//resource">
-include::{docRoot}/<xsl:value-of select="$artifactId"/>/concepts-and-constraints.adoc[]
+include::{docRoot}/<xsl:value-of select="$artifactId"/>/asciidoc/concepts-and-constraints.adoc[]
         </xsl:if>
         <xsl:apply-templates select="//report"/>
         <xsl:apply-templates select="//model"/>
@@ -53,7 +53,7 @@ about the model.
 
     <xsl:template match="report">
         <xsl:value-of select="$newline"/>
-include::{docRoot}/<xsl:value-of select="$artifactId"/>/report.adoc[]
+include::{docRoot}/<xsl:value-of select="$artifactId"/>/asciidoc/report.adoc[]
     </xsl:template>
 
 </xsl:stylesheet>
