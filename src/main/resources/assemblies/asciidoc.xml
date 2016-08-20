@@ -32,6 +32,21 @@
             </includes>
         </fileSet>
         <fileSet>
+            <!--
+             ! Why do we include the JavaDoc in the assembly. Why do
+             ! we not used the generated Javadoc jar?
+             ! This is currently the best way to ensure a fixed directory
+             ! layout for the user manual that we can not do with
+             ! the current version of the Maven Dependency Plugin.
+             ! Oliver B. Fischer, 2016-08-20
+             !-->
+            <directory>${project.build.directory}/apidocs</directory>
+            <outputDirectory>apidocs</outputDirectory>
+            <includes>
+                <include>*</include>
+            </includes>
+        </fileSet>
+        <fileSet>
             <directory>src</directory>
             <outputDirectory>source</outputDirectory>
             <includes>
