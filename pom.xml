@@ -26,6 +26,12 @@
         </license>
     </licenses>
 
+    <scm>
+        <connection>scm:git:git@github.com:buschmais/jqa-asciidoctor-utilities.git</connection>
+        <developerConnection>scm:git:git@github.com:buschmais/jqa-asciidoctor-utilities.git</developerConnection>
+        <url>https://github.com/buschmais/jqa-asciidoctor-utilities</url>
+    </scm>
+
     <properties>
         <jqa.own-constraints.version>1.2.0-RC1</jqa.own-constraints.version>
     </properties>
