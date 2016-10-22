@@ -14,6 +14,11 @@
     <name>jQAssistant Asciidoctor Utilities</name>
     <url>http://jqassistant.org/</url>
 
+    <description>
+        A collection of various stuff required by projects of the jQAssistant ecosystem to generate and
+        to build the documentation of jQAssistant.
+    </description>
+
     <organization>
         <name>buschmais GbR</name>
         <url>http://www.buschmais.com</url>
