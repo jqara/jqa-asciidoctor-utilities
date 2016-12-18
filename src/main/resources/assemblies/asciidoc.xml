@@ -20,7 +20,7 @@
             <directory>src/main/asciidoc</directory>
             <outputDirectory>asciidoc</outputDirectory>
             <includes>
-                <include>*</include>
+                <include>**/*</include>
             </includes>
             <filtered>true</filtered>
         </fileSet>
@@ -28,7 +28,7 @@
             <directory>${project.build.directory}/generated-sources/asciidoc</directory>
             <outputDirectory>asciidoc</outputDirectory>
             <includes>
-                <include>*</include>
+                <include>**/*</include>
             </includes>
         </fileSet>
         <fileSet>
