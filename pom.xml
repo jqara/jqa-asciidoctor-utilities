@@ -39,7 +39,7 @@
   </scm>
 
     <properties>
-        <jqa.own-constraints.version>1.2.0-RC2-SNAPSHOT</jqa.own-constraints.version>
+        <jqa.own-constraints.version>1.2.0</jqa.own-constraints.version>
     </properties>
 
     <build>
