@@ -39,7 +39,7 @@
   </scm>
 
     <properties>
-        <jqa.own-constraints.version>1.3.0-SNAPSHOT</jqa.own-constraints.version>
+        <jqa.own-constraints.version>1.4.0-SNAPSHOT</jqa.own-constraints.version>
     </properties>
 
     <build>
