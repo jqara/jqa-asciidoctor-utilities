@@ -14,7 +14,7 @@
         <format>zip</format>
     </formats>
     <includeBaseDirectory>true</includeBaseDirectory>
-    <baseDirectory>${project.artifactId}</baseDirectory>
+    <baseDirectory>${project.groupId}/${project.artifactId}</baseDirectory>
     <fileSets>
         <fileSet>
             <directory>src/main/asciidoc</directory>

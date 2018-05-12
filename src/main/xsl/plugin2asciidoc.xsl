@@ -3,6 +3,7 @@
                 xmlns:plugin="http://www.buschmais.com/jqassistant/core/plugin/schema/v1.1">
     <xsl:output method="text" version="1.0" encoding="utf8" indent="no"/>
 
+    <xsl:param name="groupId"/>
     <xsl:param name="artifactId"/>
 
     <xsl:variable name="pluginName">
@@ -21,7 +22,7 @@
         <xsl:apply-templates select="//scanner"/>
 
         <xsl:if test="//resource">
-include::{docRoot}/<xsl:value-of select="$artifactId"/>/asciidoc/concepts-and-constraints.adoc[]
+include::{docRoot}/<xsl:value-of select="$groupId"/>/<xsl:value-of select="$artifactId"/>/asciidoc/concepts-and-constraints.adoc[]
         </xsl:if>
         <xsl:apply-templates select="//report"/>
         <xsl:apply-templates select="//model"/>
@@ -39,7 +40,7 @@ include::{docRoot}/<xsl:value-of select="$artifactId"/>/asciidoc/concepts-and-co
      !-->
     <xsl:template match="scanner">
         <xsl:value-of select="$newline"/>
-include::{docRoot}/<xsl:value-of select="$artifactId"/>/asciidoc/scanner.adoc[]
+include::{docRoot}/<xsl:value-of select="$groupId"/>/<xsl:value-of select="$artifactId"/>/asciidoc/scanner.adoc[]
     </xsl:template>
 
     <xsl:template match="model">
@@ -47,13 +48,13 @@ include::{docRoot}/<xsl:value-of select="$artifactId"/>/asciidoc/scanner.adoc[]
 == Model of the Plugin
 
         <xsl:value-of select="$newline"/>
-Refer to the link:<xsl:value-of select="$artifactId"/>/apidocs/index.html[plugin Javadoc] for details
+Refer to the link:<xsl:value-of select="$groupId"/>/<xsl:value-of select="$artifactId"/>/apidocs/index.html[plugin Javadoc] for details
 about the model.
     </xsl:template>
 
     <xsl:template match="report">
         <xsl:value-of select="$newline"/>
-include::{docRoot}/<xsl:value-of select="$artifactId"/>/asciidoc/report.adoc[]
+include::{docRoot}/<xsl:value-of select="$groupId"/>/<xsl:value-of select="$artifactId"/>/asciidoc/report.adoc[]
     </xsl:template>
 
 </xsl:stylesheet>
