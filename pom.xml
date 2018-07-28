@@ -39,7 +39,7 @@
   </scm>
 
     <properties>
-        <jqa.own-constraints.version>1.5.0-SNAPSHOT</jqa.own-constraints.version>
+        <jqa-own-constraints.version>1.5.0-SNAPSHOT</jqa-own-constraints.version>
     </properties>
 
     <build>
@@ -63,17 +63,17 @@
                     <dependency>
                         <groupId>com.buschmais.jqassistant</groupId>
                         <artifactId>legal-constraints</artifactId>
-                        <version>${jqa.own-constraints.version}</version>
+                        <version>${jqa-own-constraints.version}</version>
                     </dependency>
                     <dependency>
                         <groupId>com.buschmais.jqassistant</groupId>
                         <artifactId>maven-commmon-constraints</artifactId>
-                        <version>${jqa.own-constraints.version}</version>
+                        <version>${jqa-own-constraints.version}</version>
                     </dependency>
                     <dependency>
                         <groupId>com.buschmais.jqassistant</groupId>
                         <artifactId>project-layout-constraints</artifactId>
-                        <version>${jqa.own-constraints.version}</version>
+                        <version>${jqa-own-constraints.version}</version>
                     </dependency>
                 </dependencies>
             </plugin>
