@@ -3,12 +3,12 @@
     <parent>
         <groupId>com.buschmais.jqassistant</groupId>
         <artifactId>jqa-uber-parent</artifactId>
-        <version>1.5.0-RC-1</version>
+        <version>1.5.0-RC-2-SNAPSHOT</version>
     </parent>
 
     <groupId>com.buschmais.jqassistant</groupId>
     <artifactId>asciidoctor-utilities</artifactId>
-    <version>1.5.0-RC-1</version>
+    <version>1.5.0-RC-2-SNAPSHOT</version>
 
     <name>jQAssistant Asciidoctor Utilities</name>
     <url>http://jqassistant.org/</url>
@@ -38,7 +38,7 @@
   </scm>
 
     <properties>
-        <jqa-own-constraints.version>1.5.0-RC-1</jqa-own-constraints.version>
+        <jqa-own-constraints.version>1.5.0-RC-2-SNAPSHOT</jqa-own-constraints.version>
     </properties>
 
     <build>
