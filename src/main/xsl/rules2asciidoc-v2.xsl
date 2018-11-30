@@ -65,18 +65,20 @@
             </xsl:for-each>
         </xsl:variable>
 
-== Concepts and Constraints provided by the <xsl:value-of select="$pluginName"/> Plugin
+== Rules provided by the <xsl:value-of select="$pluginName"/> plugin
 
 === Concepts provided by the <xsl:value-of select="$pluginName"/>  plugin
 
         <xsl:apply-templates select="exsl:node-set($allConcepts)/concept">
             <!-- See http://www.xml.com/pub/a/2003/07/16/nodeset.html -->
-            <xsl:sort select="@id" order="ascending"/>
+            <xsl:sort select="@id"/>
         </xsl:apply-templates>
+
+=== Constraints provided by the <xsl:value-of select="$pluginName"/>  plugin
 
         <xsl:apply-templates select="exsl:node-set($allConstraints)/constraint">
             <!-- See http://www.xml.com/pub/a/2003/07/16/nodeset.html -->
-            <xsl:sort select="@id" order="ascending"/>
+            <xsl:sort select="@id"/>
         </xsl:apply-templates>
     </xsl:template>
 
@@ -93,8 +95,8 @@
             </xsl:choose>
         </xsl:variable>
 
-[id="<xsl:value-of select="@id"/>"]
-==== <xsl:value-of select="$typeName"/>&#x00A0;<xsl:value-of select="@id"/>
+[[<xsl:value-of select="@id"/>]]
+==== <xsl:value-of select="$typeName"/>&#x00A0;`<xsl:value-of select="@id"/>`
 <xsl:value-of select="$newline"/>
 
         <xsl:if test="deprecated">
@@ -114,7 +116,7 @@
         <xsl:if test="requiresConcept">
 Required concepts:
 <xsl:for-each select="requiresConcept">
-* &lt;&lt;<xsl:value-of select="@refId"/>&gt;&gt;<xsl:value-of select="$newline"/>
+* &lt;&lt;<xsl:value-of select="@refId"/>,<xsl:value-of select="@refId"/>&gt;&gt;<xsl:value-of select="$newline"/>
 </xsl:for-each>
         </xsl:if>
 
