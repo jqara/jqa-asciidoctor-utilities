@@ -25,7 +25,6 @@
 include::{docRoot}/<xsl:value-of select="$groupId"/>/<xsl:value-of select="$artifactId"/>/asciidoc/concepts-and-constraints.adoc[]
         </xsl:if>
         <xsl:apply-templates select="//report"/>
-        <xsl:apply-templates select="//model"/>
     </xsl:template>
 
     <xsl:template match="description">
@@ -41,15 +40,6 @@ include::{docRoot}/<xsl:value-of select="$groupId"/>/<xsl:value-of select="$arti
     <xsl:template match="scanner">
         <xsl:value-of select="$newline"/>
 include::{docRoot}/<xsl:value-of select="$groupId"/>/<xsl:value-of select="$artifactId"/>/asciidoc/scanner.adoc[]
-    </xsl:template>
-
-    <xsl:template match="model">
-
-== Model of the Plugin
-
-        <xsl:value-of select="$newline"/>
-Refer to the link:<xsl:value-of select="$groupId"/>/<xsl:value-of select="$artifactId"/>/apidocs/index.html[plugin Javadoc] for details
-about the model.
     </xsl:template>
 
     <xsl:template match="report">

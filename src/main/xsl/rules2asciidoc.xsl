@@ -67,6 +67,13 @@
 
 == Rules provided by the <xsl:value-of select="$pluginName"/> plugin
 
+<xsl:for-each select="exsl:node-set($allConcepts)/concept">
+* &lt;&lt;<xsl:value-of select="@id"/>&gt;&gt;
+</xsl:for-each>
+<xsl:for-each select="exsl:node-set($allConstraints)/constraint">
+* &lt;&lt;<xsl:value-of select="@id"/>&gt;&gt;
+</xsl:for-each>
+
 === Concepts provided by the <xsl:value-of select="$pluginName"/>  plugin
 
         <xsl:apply-templates select="exsl:node-set($allConcepts)/concept">
@@ -116,7 +123,7 @@
         <xsl:if test="requiresConcept">
 Required concepts:
 <xsl:for-each select="requiresConcept">
-* &lt;&lt;<xsl:value-of select="@refId"/>,<xsl:value-of select="@refId"/>&gt;&gt;<xsl:value-of select="$newline"/>
+* &lt;&lt;<xsl:value-of select="@refId"/>,<xsl:value-of select="@refId"/>&gt;&gt;
 </xsl:for-each>
         </xsl:if>
 
