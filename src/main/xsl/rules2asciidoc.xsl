@@ -74,19 +74,22 @@
 * &lt;&lt;<xsl:value-of select="@id"/>&gt;&gt;
 </xsl:for-each>
 
+        <xsl:if test="exsl:node-set($allConcepts)/concept">
 === Concepts provided by the <xsl:value-of select="$pluginName"/>  plugin
+            <xsl:apply-templates select="exsl:node-set($allConcepts)/concept">
+                <!-- See http://www.xml.com/pub/a/2003/07/16/nodeset.html -->
+                <xsl:sort select="@id"/>
+            </xsl:apply-templates>
+        </xsl:if>
 
-        <xsl:apply-templates select="exsl:node-set($allConcepts)/concept">
-            <!-- See http://www.xml.com/pub/a/2003/07/16/nodeset.html -->
-            <xsl:sort select="@id"/>
-        </xsl:apply-templates>
-
+        <xsl:if test="exsl:node-set($allConstraints)/constraint">
 === Constraints provided by the <xsl:value-of select="$pluginName"/>  plugin
+            <xsl:apply-templates select="exsl:node-set($allConstraints)/constraint">
+                <!-- See http://www.xml.com/pub/a/2003/07/16/nodeset.html -->
+                <xsl:sort select="@id"/>
+            </xsl:apply-templates>
+        </xsl:if>
 
-        <xsl:apply-templates select="exsl:node-set($allConstraints)/constraint">
-            <!-- See http://www.xml.com/pub/a/2003/07/16/nodeset.html -->
-            <xsl:sort select="@id"/>
-        </xsl:apply-templates>
     </xsl:template>
 
     <xsl:template match="concept | constraint">
