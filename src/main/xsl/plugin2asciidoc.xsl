@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-                xmlns:plugin="http://www.buschmais.com/jqassistant/core/plugin/schema/v1.4">
+<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <xsl:output method="text" version="1.0" encoding="utf8" indent="no"/>
 
     <xsl:param name="groupId"/>
@@ -14,7 +13,13 @@
         <xsl:text>&#10;</xsl:text>
     </xsl:variable>
 
-    <xsl:template match="plugin:jqassistant-plugin">
+    <xsl:template match="@*|node()">
+        <xsl:copy copy-namespaces="no">
+            <xsl:apply-templates select="@*|node()"/>
+        </xsl:copy>
+    </xsl:template>
+
+    <xsl:template match="/">
 = <xsl:value-of select="@name"/> Plugin
 <xsl:value-of select="$newline"/>
         <xsl:apply-templates select="//description"/>
@@ -46,5 +51,4 @@ include::{docRoot}/<xsl:value-of select="$groupId"/>/<xsl:value-of select="$arti
         <xsl:value-of select="$newline"/>
 include::{docRoot}/<xsl:value-of select="$groupId"/>/<xsl:value-of select="$artifactId"/>/asciidoc/report.adoc[]
     </xsl:template>
-
 </xsl:stylesheet>
