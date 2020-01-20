@@ -108,11 +108,11 @@
 ==== <xsl:value-of select="$typeName"/>&#x00A0;`<xsl:value-of select="@id"/>`
 <xsl:value-of select="$newline"/>
 
-        <xsl:if test="deprecated">
-            <xsl:value-of select="$newline"/>
-            _The rule is deprecated: <xsl:value-of select="deprecated"/>_
-            <xsl:value-of select="$newline"/>
-        </xsl:if>
+<xsl:if test="deprecated">
+  <xsl:value-of select="$newline"/>
+_The rule is deprecated: <xsl:value-of select="deprecated"/>_
+  <xsl:value-of select="$newline"/>
+</xsl:if>
 
 <xsl:value-of select="$newline"/>
 <xsl:value-of select="description"/>
@@ -122,12 +122,12 @@
 <xsl:value-of select="cypher"/>
 ----
 
-        <xsl:if test="requiresConcept">
+<xsl:if test="requiresConcept">
 Required concepts:
 <xsl:for-each select="requiresConcept">
 * &lt;&lt;<xsl:value-of select="@refId"/>,<xsl:value-of select="@refId"/>&gt;&gt;
 </xsl:for-each>
-        </xsl:if>
+</xsl:if>
 
     </xsl:template>
 

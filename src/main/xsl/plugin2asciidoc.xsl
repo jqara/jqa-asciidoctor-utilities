@@ -5,10 +5,6 @@
     <xsl:param name="groupId"/>
     <xsl:param name="artifactId"/>
 
-    <xsl:variable name="pluginName">
-        <xsl:value-of select="*[local-name()='jqassistant-plugin'][0]/@name"/>
-    </xsl:variable>
-
     <xsl:variable name='newline'>
         <xsl:text>&#10;</xsl:text>
     </xsl:variable>
@@ -20,7 +16,7 @@
     </xsl:template>
 
     <xsl:template match="/">
-= <xsl:value-of select="@name"/> Plugin
+= <xsl:value-of select="//@name"/> Plugin
 <xsl:value-of select="$newline"/>
         <xsl:apply-templates select="//description"/>
 <xsl:value-of select="$newline"/>
