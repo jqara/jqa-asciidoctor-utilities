@@ -27,7 +27,7 @@
          !   $dirOfRules.
          !-->
         <xsl:variable name="allConcepts">
-            <xsl:for-each select="//resource">
+            <xsl:for-each select="//resource[matches(text(), '.+\.xml$')]">
                 <xsl:variable name="fqp2rulesFile">
                     <xsl:value-of select="$dirOfRules"/>
                     <xsl:value-of select="'/'"/>
@@ -46,7 +46,7 @@
         </xsl:variable>
 
         <xsl:variable name="allConstraints">
-            <xsl:for-each select="//resource">
+            <xsl:for-each select="//resource[matches(text(), '.+\.xml$')]">
                 <xsl:variable name="fqp2rulesFile">
                     <xsl:value-of select="$dirOfRules"/>
                     <xsl:value-of select="'/'"/>
