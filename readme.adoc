@@ -1,7 +1,5 @@
 = jQAssistant Asciidoctor Utilities
 
-image::https://github.com/jQAssistant/jqa-asciidoctor-utilities/workflows/jQA%20Standard%20CI%20Build/badge.svg[jQA Standard CI Build]
-
 A collection of various stuff required by projects of the
 https://www.jqassistant.org[jQAssistant^] ecosystem to generate and
 to build the documentation of https://www.jqassistant.org[jQAssistant^].
