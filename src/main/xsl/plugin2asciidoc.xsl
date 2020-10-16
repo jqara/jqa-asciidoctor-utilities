@@ -5,6 +5,13 @@
     <xsl:param name="groupId"/>
     <xsl:param name="artifactId"/>
 
+    <!--
+     ! The value of this parameter is used as id in Asciidoctor for the
+     ! toplevel section of the plugin documentation and as target for
+     ! internal cross references.
+     !-->
+    <xsl:param name="toplevelid"/>
+
     <xsl:variable name='newline'>
         <xsl:text>&#10;</xsl:text>
     </xsl:variable>
@@ -16,6 +23,11 @@
     </xsl:template>
 
     <xsl:template match="/">
+        <xsl:if test="not($toplevelid)">
+            <xsl:message terminate="yes">Parameter toplevelid is missing. Can't continue without that parameter.</xsl:message>
+        </xsl:if>
+
+[id=<xsl:value-of select="$toplevelid"/>]
 = <xsl:value-of select="//@name"/> Plugin
 <xsl:value-of select="$newline"/>
         <xsl:apply-templates select="//description"/>
